@@ -9,11 +9,32 @@ function getData() {
     .then(showData);
 }
 
+
 //2- first interaction - how-to find each element
-function showData(data) {
+/*function showData(data) {
   data.feed.entry.forEach(oneMovie);
 }
+
+
 
 function oneMovie(item){
     console.log(item.gsx$starrating.$t)
 }
+*/
+
+
+//3- showing basic info: movie details/name
+
+function showData(data){
+    data.feed.entry.forEach(oneMovie);
+}
+
+function oneMovie(item){
+    console.log(item);
+    const template = document.querySelector("template").content;
+    const copy = template.cloneNode(true);
+    copy.querySelector(".movie_title").textContent=item.gsx$filmname.$t;
+    copy.querySelector(".short_description").textContent=item.gsx$shortsdescription.$t;
+    document.querySelector(".movieslist").appendChild(copy);
+}
+
