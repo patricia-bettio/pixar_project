@@ -1,5 +1,5 @@
 const link =
-  "https://spreadsheets.google.com/feeds/list/2PACX-1vSWhrxgk0RztP15KzpGGO8LeIXIDsCQtHTPYiWQtYakJUasjoZ3gtea1j7T0LwEmXsOAlRD-1kgWC-j/od6/public/values?alt=json";
+  "https://spreadsheets.google.com/feeds/list/1rQ35b5jjrtd8MWp_J8qy2OFWwCdIaUxJMOn-aTHxDwk/od6/public/values?alt=json";
 window.addEventListener("load", getData);
 
 function getData() {
