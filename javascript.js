@@ -9,6 +9,9 @@ function getData() {
 }
 
 function showData(data) {
-  console.log(data);
+  data.feed.entry.forEach(oneMovie);
 }
-getData();
+
+function oneMovie(item){
+    console.log(item.gsx$starrating.$t)
+}
