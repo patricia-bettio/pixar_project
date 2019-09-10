@@ -26,8 +26,14 @@ function oneMovie(item){
 //3- showing basic info: movie details/name
 
 function showData(data){
+
+
+    data.feed.entry.forEach(createCategories);
     data.feed.entry.forEach(oneMovie);
 }
+
+
+
 
 function oneMovie(item){
     console.log(item);
@@ -37,4 +43,27 @@ function oneMovie(item){
     copy.querySelector(".short_description").textContent=item.gsx$shortsdescription.$t;
     document.querySelector(".movieslist").appendChild(copy);
 }
+
+
+
+
+//4- Create categories + assign each Item to its category
+
+
+
+function createCategories(category){
+
+    const section = document.createElement("section");
+    const header = document.createElement("h1");
+    header.textContent=category.gsx$decade.$t;
+    section.setAttribute("id", category.gsx$decade.$t);
+    section.appendChild(header);
+    document.querySelector("main").appendChild(section);
+}
+
+
+
+
+
+
 
