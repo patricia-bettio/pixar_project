@@ -65,15 +65,15 @@ function oneMovie(item){
     copy.querySelector(".movie_img").setAttribute("src", "imgs/" + item.gsx$image.$t);
     console.log(item.gsx$decade.$t);
 
+
+      //EDIT
+    copy.querySelector(".modalbutton").addEventListener("click", (showDetails));
+
+
     document.querySelector("#decade-" +item.gsx$decade.$t).appendChild(copy);
 
-    /*EDIT
-    copy.querySelector("button").addEventListener("click", () => {
-    fetch(`https://kea-alt-del.dk/t5/api/product?id=${dish.id}`)
-      .then(res => res.json())
-      .then(showDetails);
-  });
-  */
+
+
 
 }
 
@@ -86,7 +86,7 @@ modal.addEventListener("click", () => {
 });
 
 function showDetails(data) {
-    modal.querySelector(".modal-name").textContent = data.name;
+    modal.querySelector(".modal-title").textContent = data.name;
     modal.querySelector(".modal-description").textContent = data.long_description;
     modal.classList.remove("hide");
 
