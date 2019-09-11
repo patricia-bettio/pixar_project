@@ -30,6 +30,7 @@ function showData(data){
     data.feed.entry.forEach(oneMovie);
 }
 
+
 //3- Save single category into an array
 function saveTitle(decades){
     //console.log(decades.gsx$decade.$t);
@@ -40,6 +41,7 @@ function saveTitle(decades){
 
 
 }
+
 
 //4- Create categories
 function newTitle(decades){
@@ -64,11 +66,30 @@ function oneMovie(item){
 
     document.querySelector("#decade-" +item.gsx$decade.$t).appendChild(copy);
 
+    /*EDIT
+    copy.querySelector("button").addEventListener("click", () => {
+    fetch(`https://kea-alt-del.dk/t5/api/product?id=${dish.id}`)
+      .then(res => res.json())
+      .then(showDetails);
+  });
+  */
+
 }
 
 
+//Modal
 
+const modal = document.querySelector(".modal-background");
+modal.addEventListener("click", () => {
+  modal.classList.add("hide");
+});
 
+function showDetails(data) {
+    modal.querySelector(".modal-name").textContent = data.name;
+    modal.querySelector(".modal-description").textContent = data.long_description;
+    modal.classList.remove("hide");
+
+}
 
 
 
