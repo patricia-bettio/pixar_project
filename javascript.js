@@ -62,6 +62,7 @@ function oneMovie(item){
     const copy = template.cloneNode(true);
     copy.querySelector(".movie_title").textContent=item.gsx$filmname.$t;
     copy.querySelector(".short_description").textContent=item.gsx$shortsdescription.$t;
+    copy.querySelector(".movie_img").setAttribute("src", "imgs/" + item.gsx$image.$t);
     console.log(item.gsx$decade.$t);
 
     document.querySelector("#decade-" +item.gsx$decade.$t).appendChild(copy);
