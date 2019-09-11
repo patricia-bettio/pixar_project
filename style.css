@@ -12,5 +12,9 @@ h5,
 h6,
 button,
 h1 {
-    display: block
+    display: block;
+}
+
+.hide {
+    display: none;
 }

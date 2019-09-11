@@ -22,12 +22,13 @@ function oneMovie(item){
 let allDecades = [];
 
 function showData(data){
-    //console.log(data);
+    console.log(data.feed.entry);
 
     data.feed.entry.forEach(saveTitle);
      console.log(allDecades);
     allDecades.forEach(newTitle);
     data.feed.entry.forEach(oneMovie);
+    addClickListener();
 }
 
 
@@ -63,34 +64,31 @@ function oneMovie(item){
     copy.querySelector(".movie_title").textContent=item.gsx$filmname.$t;
     copy.querySelector(".short_description").textContent=item.gsx$shortsdescription.$t;
     copy.querySelector(".movie_img").setAttribute("src", "imgs/" + item.gsx$image.$t);
-    console.log(item.gsx$decade.$t);
-
-
-      //EDIT
-    copy.querySelector(".modalbutton").addEventListener("click", (showDetails));
-
-
+    copy.querySelector(".modal-description").textContent=item.gsx$longdescription.$t;
+    copy.querySelector(".modal-description").classList.add("desc-id-" + item.gsx$b.$t );
+    copy.querySelector(".modalbutton").setAttribute("data-id", item.gsx$b.$t);
+    //console.log(item.gsx$decade.$t);
     document.querySelector("#decade-" +item.gsx$decade.$t).appendChild(copy);
 
+}
 
+//6 add click listeners to modal buttons
 
+function addClickListener(){
+    document.querySelectorAll(".modalbutton").forEach(btn=>{
+        btn.addEventListener("click", toggleModalDesc);
+    });
+}
 
+function toggleModalDesc(evt){
+    const id = evt.currentTarget.dataset.id
+    document.querySelector(".desc-id-" + id).classList.toggle("hide");
 }
 
 
-//Modal
 
-const modal = document.querySelector(".modal-background");
-modal.addEventListener("click", () => {
-  modal.classList.add("hide");
-});
 
-function showDetails(data) {
-    modal.querySelector(".modal-title").textContent = data.name;
-    modal.querySelector(".modal-description").textContent = data.long_description;
-    modal.classList.remove("hide");
 
-}
 
 
 
