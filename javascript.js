@@ -18,37 +18,55 @@ function oneMovie(item){
 }
 */
 
-//3- adding functions to display data
+//2- adding functions to display data
+let allDecades = [];
 
 function showData(data){
+    //console.log(data);
+
+    data.feed.entry.forEach(saveTitle);
+     console.log(allDecades);
+    allDecades.forEach(newTitle);
     data.feed.entry.forEach(oneMovie);
-    data.feed.entry.forEach(newTitle);
+}
+
+//3- Save single category into an array
+function saveTitle(decades){
+    //console.log(decades.gsx$decade.$t);
+    //Make an array of all decades where each one only exists once and as long the file is not empty
+    if(allDecades.includes(decades.gsx$decade.$t) == false){
+        allDecades.push(decades.gsx$decade.$t);
+    }
+
+
 }
 
 //4- Create categories
-
 function newTitle(decades){
-    console.log(decades.gsx$decade.$t);
+    //console.log(decades.gsx$decade);
     const section = document.createElement("section");
     const header = document.createElement("h1");
-    header.textContent=decades.gsx$decade.$t;
-    section.setAttribute("id", decades.gsx$decade.$t);
+    header.textContent=decades;
+    section.setAttribute("id", "decade-" +decades);
     section.appendChild(header);
-    document.querySelector("main").appendChild(section);
+    document.querySelector(".movieslist").appendChild(section);
 }
 
-//3-basic info
+
+//5-basic info
 function oneMovie(item){
 
     const template = document.querySelector("template").content;
     const copy = template.cloneNode(true);
     copy.querySelector(".movie_title").textContent=item.gsx$filmname.$t;
     copy.querySelector(".short_description").textContent=item.gsx$shortsdescription.$t;
+    console.log(item.gsx$decade.$t);
 
-
-    document.querySelector(".movieslist").appendChild(copy);
+    document.querySelector("#decade-" +item.gsx$decade.$t).appendChild(copy);
 
 }
+
+
 
 
 
