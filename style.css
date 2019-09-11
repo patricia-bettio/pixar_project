@@ -14,3 +14,33 @@ button,
 h1 {
     display: block
 }
+
+
+/* for browsers that support GRID, apply the below*/
+@supports (display:grid) {
+
+
+main {
+    max-width: none;
+    margin: 0;
+
+}
+    article {
+        margin: 0;
+    }
+
+    .movieslist>section {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-gap: 2rem;
+    }
+    .movieslist>section>h1{
+        grid-column: 1/-1;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        padding-left: 0.5rem;
+        border-radius: 0.3rem;
+        background-color: rgba(255, 255, 255, 0.3);
+
+    }
+}
