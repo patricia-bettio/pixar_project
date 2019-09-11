@@ -13,8 +13,7 @@ h6,
 button,
 h1 {
     display: block;
-}
-
+}-
 .hide {
     display: none;
 }
@@ -47,4 +46,9 @@ main {
         background-color: rgba(255, 255, 255, 0.3);
 
     }
+}
+
+.movie_img{
+    width: 400px;
+    height: 550px;
 }
