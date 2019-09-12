@@ -22,6 +22,10 @@ h1 {
 /* for browsers that support GRID, apply the below*/
 @supports (display:grid) {
 
+    body {
+        display: grid;
+
+    }
 
 main {
     max-width: none;
