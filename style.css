@@ -13,7 +13,7 @@ h6,
 button,
 h1 {
     display: block;
-}-
+}
 .hide {
     display: none;
 }
@@ -49,6 +49,6 @@ main {
 }
 
 .movie_img{
-    width: 400px;
-    height: 550px;
+    width: 300px;
+    height: 400px;
 }
