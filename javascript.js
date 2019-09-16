@@ -1,12 +1,12 @@
 //1- fetch data
 const link =
-  "https://spreadsheets.google.com/feeds/list/1rQ35b5jjrtd8MWp_J8qy2OFWwCdIaUxJMOn-aTHxDwk/od6/public/values?alt=json";
+    "https://spreadsheets.google.com/feeds/list/1rQ35b5jjrtd8MWp_J8qy2OFWwCdIaUxJMOn-aTHxDwk/od6/public/values?alt=json";
 window.addEventListener("load", getData);
 
 function getData() {
-  fetch(link)
-    .then(res => res.json())
-    .then(showData);
+    fetch(link)
+        .then(res => res.json())
+        .then(showData);
 }
 
 //example first interaction - how-to find each element
@@ -21,11 +21,11 @@ function oneMovie(item){
 //2- adding functions to display data
 let allDecades = [];
 
-function showData(data){
+function showData(data) {
     console.log(data.feed.entry);
 
     data.feed.entry.forEach(saveTitle);
-     console.log(allDecades);
+    console.log(allDecades);
     allDecades.forEach(newTitle);
     data.feed.entry.forEach(oneMovie);
     addClickListener();
@@ -33,10 +33,10 @@ function showData(data){
 
 
 //3- Save single category into an array
-function saveTitle(decades){
+function saveTitle(decades) {
     //console.log(decades.gsx$decade.$t);
     //Make an array of all decades where each one only exists once and as long the file is not empty
-    if(allDecades.includes(decades.gsx$decade.$t) == false){
+    if (allDecades.includes(decades.gsx$decade.$t) == false) {
         allDecades.push(decades.gsx$decade.$t);
     }
 
@@ -45,47 +45,64 @@ function saveTitle(decades){
 
 
 //4- Create categories
-function newTitle(decades){
+function newTitle(decades) {
     //console.log(decades.gsx$decade);
     const section = document.createElement("section");
     const header = document.createElement("h1");
-    header.textContent=decades;
-    section.setAttribute("id", "decade-" +decades);
+    header.textContent = decades;
+    section.setAttribute("id", "decade-" + decades);
     section.appendChild(header);
     document.querySelector(".movieslist").appendChild(section);
 }
 
 
 //5-basic info
-function oneMovie(item){
+function oneMovie(item) {
 
     const template = document.querySelector("template").content;
     const copy = template.cloneNode(true);
-    copy.querySelector(".movie_title").textContent=item.gsx$filmname.$t;
-    copy.querySelector(".short_description").textContent=item.gsx$shortsdescription.$t;
+    copy.querySelector(".movie_title").textContent = item.gsx$filmname.$t;
+    copy.querySelector(".short_description").textContent = item.gsx$shortsdescription.$t;
     copy.querySelector(".movie_img").setAttribute("src", "imgs/" + item.gsx$image.$t);
-    copy.querySelector(".modal-description").textContent=item.gsx$longdescription.$t;
-    copy.querySelector(".modal-description").classList.add("desc-id-" + item.gsx$b.$t );
+    copy.querySelector(".modal-description").textContent = item.gsx$longdescription.$t;
+    copy.querySelector(".modal-bg").classList.add("desc-id-" + item.gsx$b.$t);
     copy.querySelector(".modalbutton").setAttribute("data-id", item.gsx$b.$t);
     //console.log(item.gsx$decade.$t);
-    document.querySelector("#decade-" +item.gsx$decade.$t).appendChild(copy);
+    document.querySelector("#decade-" + item.gsx$decade.$t).appendChild(copy);
 
 }
 
 //6 add click listeners to modal buttons
-
-function addClickListener(){
-    document.querySelectorAll(".modalbutton").forEach(btn=>{
+function addClickListener() {
+    document.querySelectorAll(".modalbutton").forEach(btn => {
         btn.addEventListener("click", toggleModalDesc);
     });
 }
 
-function toggleModalDesc(evt){
+function toggleModalDesc(evt) {
     const id = evt.currentTarget.dataset.id
     document.querySelector(".desc-id-" + id).classList.toggle("hide");
+    document.querySelectorAll('.modal-bg').forEach(btn => {
+        btn.addEventListener("click", hideModal);
+    });
 }
 
 
+function hideModal() {
+    console.log('hey')
+    document.querySelector('.modal-bg').classList.add('hide');
+}
+
+
+//7 Modal
+/*
+var modalButton = document.querySelector(".modalbutton");
+var modalBg = document.querySelector(".modal-bg");
+
+modalButton.addEventListener("click"function ()) {
+    modalBg.classList.add("bg-active");
+}
+*/
 
 
 
@@ -94,5 +111,40 @@ function toggleModalDesc(evt){
 
 
 
+/*const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
 
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
 
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
+}
+*/
