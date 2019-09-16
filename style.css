@@ -3,6 +3,9 @@ main {
     margin: 0 auto;
 }
 
+body {
+    margin: 0;
+}
 
 h1,
 h2,
@@ -55,4 +58,57 @@ main {
 .movie_img{
     width: 300px;
     height: 450px;
+}
+
+
+/* Menu style */
+
+ul {
+    list-style-type: none;
+    background-image: url(imgs/poster_sketches_30.jpg);
+    background-position: bottom;
+    background-size: cover;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    width: 350px;
+    margin: 0;
+
+
+}
+
+
+li a {
+display:flex;
+    color: white;
+    border-style: solid;
+    background-color: #3350A3;
+
+    position: relative;
+    top: 200px;
+    left: -20px;
+    padding: 1rem;
+    margin: 1rem;
+    text-align:center;
+    text-decoration: none;
+
+
+
+}
+
+.active {
+    background-color: #EE3124;
+}
+/*Pixar logo*/
+
+#pixarlogo {
+    position: absolute;
+    height: auto;
+    width: 300px;
+
+    margin: 10px;
+
+
+
+
 }
