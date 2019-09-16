@@ -139,6 +139,7 @@ a:hover {
     height: auto;
     width: 300px;
 
+
     margin: 10px;
 
 
@@ -149,4 +150,5 @@ a:hover {
 #topbar {
     background-color: aqua;
     position: static;
+
 }
