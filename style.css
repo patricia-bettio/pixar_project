@@ -159,6 +159,80 @@ a:hover {
 
 }
 
+
+/*history*/
+
+.historycontent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5%;
+    width: 90%;
+}
+
+.historytext {
+    padding: 2.5%;
+    width: 95%;
+    padding-top: 0;
+}
+
+.historytext h1 {
+    margin-block-start: 0.3em;
+    font-size: 25px;
+}
+
+.historytext h2 {
+    margin-top: 3em;
+    font-size: 25px;
+}
+
+.historytext p {
+    line-height: 1.5em;
+}
+
+.historymovies {
+    width: 100%;
+}
+
+.historyimages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.historymovies img {
+    padding: 1.5%;
+    width: 97%;
+}
+
+.historyimages img {
+    padding: 2.5%;
+    width: 95%;
+}
+
+@media only screen and (max-width: 900px) {
+    .historycontent {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 1.5%;
+        width: 97%;
+    }
+
+    .historytext h1 {
+        margin-block-start: 1em;
+        font-size: 20px;
+    }
+
+    .historytext h2 {
+        margin-top: 1em;
+        font-size: 20px;
+    }
+
+    .historytext p {
+        font-size: 12px;
+    }
+}
+
+
 /*modal style*/
 .hide {
     display: none;
