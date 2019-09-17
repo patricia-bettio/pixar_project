@@ -22,6 +22,17 @@ h1 {
     display: none;
 }
 
+.modalbutton {
+    float: right;
+    display: block;
+    bottom: 0px;;
+    background-color: #3350A3;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 90px;
+}
+
 
 /* for browsers that support GRID, apply the below*/
 @supports (display:grid) {
@@ -42,13 +53,14 @@ h1 {
     }
 
 
-    main {
-        background-color: #EE3124;
-        max-width: none;
-        margin: 0;
-        grid-area: maincontainer;
 
+main {
+    background-color: #E2684B;
+    max-width: none;
+    margin: 0;
+    grid-area: maincontainer;
     }
+
 
     article {
         margin: 0px;
@@ -56,19 +68,22 @@ h1 {
 
     .movieslist > section {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
     }
 
     .movieslist > section > h1 {
         grid-column: 1/-1;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        grid-gap: auto;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         padding-left: 0.5rem;
-        border-radius: 0.3rem;
         background-color: #3350A3;
         color: white;
         text-align: center;
+        margin: 40px;
+        margin-top: 80px;
 
     }
 
@@ -78,7 +93,7 @@ h1 {
 
 .movie_img {
     display: block;
-    width: 250px;
+    width: 180px;
     height: auto;
     margin: auto;
 }
@@ -86,9 +101,9 @@ h1 {
 
 .moviesbody {
     display: block;
-    width: 300px;
-    height: auto;
-    padding: 2rem;
+    width: 250px;
+    height: 500px;
+    padding: 1rem;
     margin: auto;
     background-color: white;
 }
@@ -107,7 +122,9 @@ ul {
     margin: 0;
 
 
+
 }
+
 
 
 li a {
@@ -115,7 +132,6 @@ li a {
     color: white;
     border-style: solid;
     background-color: #3350A3;
-
     position: relative;
     top: 200px;
     left: -20px;
@@ -129,12 +145,12 @@ li a {
 }
 
 .active {
-    background-color: #EE3124;
+    background-color: #E2684B;
 }
 
 
 a:hover {
-    background-color: #EE3124;
+    background-color:#E2684B;
 }
 
 /*Pixar logo*/
@@ -154,8 +170,9 @@ a:hover {
 
 /*topbar*/
 #topbar {
-    background-color: aqua;
-    position: static;
+    background-color: #3350A3;
+    position: relative;
+    height: 200px;
 
 }
 
