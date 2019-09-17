@@ -69,13 +69,13 @@ main {
     .movieslist>section>h1{
         grid-column: 1/-1;
         grid-gap: auto;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
         padding-left: 0.5rem;
-        border-radius: 0.3rem;
         background-color: #3350A3;
         color: white;
         text-align: center;
+        margin: 40px;
 
     }
 
@@ -159,6 +159,6 @@ a:hover {
 /*topbar*/
 #topbar {
     background-color: aqua;
-    position: static;
+    position: relative;
 
 }
