@@ -152,3 +152,74 @@ a:hover {
     position: static;
 
 }
+
+/*history*/
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5%;
+    width: 90%;
+}
+
+.text {
+    padding: 2.5%;
+    width: 95%;
+    padding-top: 0;
+}
+
+.text h1 {
+    margin-block-start: 0.3em;
+    font-size: 25px;
+}
+
+.text h2 {
+    margin-top: 3em;
+    font-size: 25px;
+}
+
+.text p {
+    line-height: 1.5em;
+}
+
+.movies {
+    width: 100%;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.movies img {
+    padding: 1.5%;
+    width: 97%;
+}
+
+.images img {
+    padding: 2.5%;
+    width: 95%;
+}
+
+@media only screen and (max-width: 900px) {
+    .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1.5%;
+    width: 97%;
+}
+  .text h1 {
+    margin-block-start: 1em;
+    font-size: 20px;
+}
+
+.text h2 {
+    margin-top: 1em;
+    font-size: 20px;
+}
+
+.text p {
+    font-size: 12px;
+}
+}
