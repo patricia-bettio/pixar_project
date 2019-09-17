@@ -21,6 +21,14 @@ h1 {
     display: none;
 }
 
+.modalbutton {
+    float: right;
+    display: block;
+    bottom: 0px;;
+
+
+}
+
 
 /* for browsers that support GRID, apply the below*/
 @supports (display:grid) {
@@ -42,7 +50,7 @@ h1 {
 
 
 main {
-    background-color: #EE3124;
+    background-color: #E2684B;
     max-width: none;
     margin: 0;
     grid-area: maincontainer;
@@ -54,11 +62,13 @@ main {
 
     .movieslist>section {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
     }
     .movieslist>section>h1{
         grid-column: 1/-1;
+        grid-gap: auto;
         padding-top: 4rem;
         padding-bottom: 4rem;
         padding-left: 0.5rem;
@@ -83,9 +93,9 @@ main {
 
 .moviesbody{
     display: block;
-    width: 300px;
-    height: auto;
-    padding: 2rem;
+    width: 250px;
+    height: 600px;
+    padding: 1rem;
     margin: auto;
     background-color: white;
 }
@@ -125,12 +135,12 @@ display:flex;
 }
 
 .active {
-    background-color: #EE3124;
+    background-color: #E2684B;
 }
 
 
 a:hover {
-    background-color:#EE3124;
+    background-color:#E2684B;
 }
 /*Pixar logo*/
 
