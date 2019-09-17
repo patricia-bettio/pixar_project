@@ -1,0 +1,118 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 1fr 1fr;
+  grid-template-areas: ". Logo Logo ." ". Video Video ." ". Nav Nav .";
+    height: 100vh;
+}
+
+.Logo { grid-area:Logo;
+    grid-template-rows: 0.1fr;
+
+}
+
+.Video { grid-area: Video;
+}
+
+.Nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr;
+  grid-template-areas: "NAV1 Nav2 Nav3";
+  grid-area: Nav;
+}
+
+.NAV1 { grid-area: NAV1;
+    background-color: ;
+    text-align: center;
+    font-size: 2em;
+    padding-top: 1px
+
+
+}
+
+.Nav2 { grid-area: Nav2;
+background-color: ;
+    text-align: center;
+    font-size: 2em;
+}
+
+.Nav3 { grid-area: Nav3;
+background-color: ;
+text-align: center;
+    font-size: 2em;
+}
+
+#Logo_Image{
+    width: 25vw;
+    padding-left: 25%;
+    padding-right: 25%;
+    position: relative;
+}
+
+li {
+  text-align: center;
+    list-style-type: none;
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+    padding top: auto;
+
+}
+
+ul{
+    color: black;
+    margin: auto;
+    position: relative;
+  bottom:0.1% ;
+}
+
+/*link styling I want to make sure the links always stay black*/
+a:link {
+  color: black;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+    text-decoration-line: line-through;
+}
+
+/* selected link */
+a:active {
+  color: black;
+    text-decoration-line: line-through;
+}
+
+
+
+
+
+#vid{
+    width: 49.5vw;
+    text-align: center;
+}
+
+
+/* All */
+.bg {
+  /* The image used */
+  background-image: url("Images/poster_sketches_30.jpg");
+
+  /* Full height */
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+
+
