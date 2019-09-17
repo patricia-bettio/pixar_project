@@ -155,71 +155,71 @@ a:hover {
 
 /*history*/
 
-.content {
+.historycontent {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 5%;
     width: 90%;
 }
 
-.text {
+.historytext {
     padding: 2.5%;
     width: 95%;
     padding-top: 0;
 }
 
-.text h1 {
+.historytext h1 {
     margin-block-start: 0.3em;
     font-size: 25px;
 }
 
-.text h2 {
+.historytext h2 {
     margin-top: 3em;
     font-size: 25px;
 }
 
-.text p {
+.historytext p {
     line-height: 1.5em;
 }
 
-.movies {
+.historymovies {
     width: 100%;
 }
 
-.images {
+.historyimages {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
 }
 
-.movies img {
+.historymovies img {
     padding: 1.5%;
     width: 97%;
 }
 
-.images img {
+.historyimages img {
     padding: 2.5%;
     width: 95%;
 }
 
 @media only screen and (max-width: 900px) {
-    .content {
+    .historycontent {
     display: grid;
     grid-template-columns: 1fr;
     margin: 1.5%;
     width: 97%;
 }
-  .text h1 {
+  .historytext h1 {
     margin-block-start: 1em;
     font-size: 20px;
 }
 
-.text h2 {
+.historytext h2 {
     margin-top: 1em;
     font-size: 20px;
 }
 
-.text p {
+.historytext p {
     font-size: 12px;
 }
 }
