@@ -17,6 +17,7 @@ button,
 h1 {
     display: block;
 }
+
 .hide {
     display: none;
 }
@@ -41,23 +42,25 @@ h1 {
     }
 
 
-main {
-    background-color: #EE3124;
-    max-width: none;
-    margin: 0;
-    grid-area: maincontainer;
+    main {
+        background-color: #EE3124;
+        max-width: none;
+        margin: 0;
+        grid-area: maincontainer;
 
-}
+    }
+
     article {
         margin: 0px;
     }
 
-    .movieslist>section {
+    .movieslist > section {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 2rem;
     }
-    .movieslist>section>h1{
+
+    .movieslist > section > h1 {
         grid-column: 1/-1;
         padding-top: 4rem;
         padding-bottom: 4rem;
@@ -73,7 +76,7 @@ main {
 
 /*POSTER movies*/
 
-.movie_img{
+.movie_img {
     display: block;
     width: 250px;
     height: auto;
@@ -81,7 +84,7 @@ main {
 }
 
 
-.moviesbody{
+.moviesbody {
     display: block;
     width: 300px;
     height: auto;
@@ -89,6 +92,7 @@ main {
     margin: auto;
     background-color: white;
 }
+
 /* Menu style */
 
 ul {
@@ -96,7 +100,7 @@ ul {
     background-image: url(imgs/poster_sketches_30.jpg);
     background-position: bottom;
     background-size: cover;
-    position:fixed;
+    position: fixed;
     height: 100%;
     overflow: auto;
     width: 350px;
@@ -107,7 +111,7 @@ ul {
 
 
 li a {
-display:flex;
+    display: flex;
     color: white;
     border-style: solid;
     background-color: #3350A3;
@@ -117,7 +121,7 @@ display:flex;
     left: -20px;
     padding: 1rem;
     margin: 1rem;
-    text-align:center;
+    text-align: center;
     text-decoration: none;
 
 
@@ -130,8 +134,9 @@ display:flex;
 
 
 a:hover {
-    background-color:#EE3124;
+    background-color: #EE3124;
 }
+
 /*Pixar logo*/
 
 #pixarlogo {
@@ -146,6 +151,7 @@ a:hover {
 
 
 }
+
 /*topbar*/
 #topbar {
     background-color: aqua;
@@ -204,22 +210,23 @@ a:hover {
 
 @media only screen and (max-width: 900px) {
     .historycontent {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 1.5%;
-    width: 97%;
-}
-  .historytext h1 {
-    margin-block-start: 1em;
-    font-size: 20px;
-}
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 1.5%;
+        width: 97%;
+    }
 
-.historytext h2 {
-    margin-top: 1em;
-    font-size: 20px;
-}
+    .historytext h1 {
+        margin-block-start: 1em;
+        font-size: 20px;
+    }
 
-.historytext p {
-    font-size: 12px;
-}
+    .historytext h2 {
+        margin-top: 1em;
+        font-size: 20px;
+    }
+
+    .historytext p {
+        font-size: 12px;
+    }
 }
