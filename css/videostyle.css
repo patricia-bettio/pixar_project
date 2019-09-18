@@ -103,7 +103,7 @@ a:active {
 /* All */
 .bg {
   /* The image used */
-  background-image: url("Images/poster_sketches_30.jpg");
+  background-image: url("../imgs/poster_sketches_30.jpg");
 
   /* Full height */
   height: 100vh;
