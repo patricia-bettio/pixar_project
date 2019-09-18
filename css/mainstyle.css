@@ -328,13 +328,10 @@ justify-content: center;
     grid-template-areas:
         "modal-image modal-title"
         "modal-image modal-description";
-    grid-gap: 1rem;
     background-color: #fefefe;
     border: 1px solid #7c1f17;
-    margin: 80px;
+    margin: 60px 250px;
     padding: 1em;
-    justify-content: center;
-
 
 }
 
