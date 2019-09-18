@@ -152,7 +152,7 @@ article {
 }
 
 .img-wrapper{
-    height: 20vw;
+    height: 280px;
     display: flex;
 }
 .moviesbody {
@@ -323,7 +323,7 @@ justify-content: center;
 
 .modal-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.75fr;
     grid-template-rows: auto;
     grid-template-areas:
         "modal-image modal-title"
@@ -331,7 +331,7 @@ justify-content: center;
     background-color: #fefefe;
     border: 1px solid #7c1f17;
     margin: 60px 250px;
-    padding: 1em;
+    padding: 1em 3em 1em 0;
 
 }
 
@@ -340,13 +340,14 @@ justify-content: center;
     grid-area: modal-image;
     width: 300px;
     height: auto;
-    padding: 1rem;
+    margin: auto;
 
 }
 
 .modal-description {
     display: grid;
    grid-area: modal-description;
+    text-align: justify;
 }
 
 .modal-title {
