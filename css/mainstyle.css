@@ -4,21 +4,21 @@
 /*fonts*/
 
 p {
-    font-family:  'Manjari', sans-serif;
+    font-family: 'Manjari', sans-serif;
 }
 
 
 h1 {
-     font-family: 'Manjari', sans-serif;
+    font-family: 'Manjari', sans-serif;
     font-weight: 100;
 }
 
 h2 {
-     font-family: 'Manjari', sans-serif;
+    font-family: 'Manjari', sans-serif;
 }
 
 h3 {
-     font-family: 'Manjari', sans-serif;
+    font-family: 'Manjari', sans-serif;
 }
 
 h4 {
@@ -33,12 +33,24 @@ h5 {
 
 }
 
+h6 {
+    font-family: 'Manjari', sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 100;
+    display: inline-flex;
+    position: relative;
+    top: 70px;
+    left: 50%;
 
-li a{
+}
+
+
+li a {
     font-family: 'Manjari', sans-serif;
     font-weight: 400;
     font-size: 20px;
-    justify-content:center;
+    justify-content: center;
 }
 
 
@@ -68,21 +80,22 @@ h1 {
 }
 
 .modalbutton {
-/*    float: right;*/
-    bottom: 0px;;
+    /*    float: right;*/
+    bottom: 0px;
+    ;
     background-color: #3350A3;
     color: white;
     border: none;
     padding: 10px;
     width: 90px;
     font-family: 'Manjari', sans-serif;
-      justify-content: center;
-  display: flex;
+    justify-content: center;
+    display: flex;
 
 
 }
 
-.button-wrapper{
+.button-wrapper {
     display: flex;
     justify-content: flex-end;
 
@@ -102,7 +115,12 @@ h1 {
     #wrapper {
         grid-area: wrapper;
         background-image: url(../imgs/poster_sketches_30.jpg);
-/*        background-attachment: fixed;*/
+        background-size: 800px 500px;
+        background-position: right;
+
+
+
+        /*        background-attachment: fixed;*/
     }
 
     #topbar {
@@ -111,19 +129,19 @@ h1 {
 
 
 
-main {
-    background-color: #E2684B;
-    max-width: none;
-    margin: 0;
-    grid-area: maincontainer;
+    main {
+        background-color: #E2684B;
+        max-width: none;
+        margin: 0;
+        grid-area: maincontainer;
     }
 
 
-article {
-    margin: 0px;
-    background-color: white;
-    padding: 1rem;
-}
+    article {
+        margin: 0px;
+        background-color: white;
+        padding: 1rem;
+    }
 
     .movieslist > section {
         display: grid;
@@ -157,17 +175,18 @@ article {
     margin: auto;
 }
 
-.img-wrapper{
+.img-wrapper {
     height: 280px;
     display: flex;
 }
+
 .moviesbody {
     display: block;
-/*    width: 250px;*/
+    /*    width: 250px;*/
     height: 100%;
-/*    padding: 1rem;*/
+    /*    padding: 1rem;*/
     margin: auto;
-/*    background-color: white;*/
+    /*    background-color: white;*/
 }
 
 /* Menu style */
@@ -211,7 +230,7 @@ li a {
 
 
 a:hover {
-    background-color:#E2684B;
+    background-color: #E2684B;
 }
 
 /*Pixar logo*/
@@ -235,6 +254,80 @@ a:hover {
     position: relative;
     height: 200px;
 
+}
+
+/*topbar boxes*/
+/* Customize the label (the container) */
+.container {
+    display: inline-flex;
+    position: relative;
+    padding-left: 40px;
+    margin: 0 30px 0 30px;
+    top: 50px;
+    left: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: 'Manjari', sans-serif;
+    color: white;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: whitesmoke;
+}
+
+/* When the checkbox is checked, add a red background */
+.container input:checked ~ .checkmark {
+    background-color: #E2684B;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 
@@ -324,7 +417,7 @@ a:hover {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-justify-content: center;
+    justify-content: center;
 }
 
 .modal-content {
@@ -353,16 +446,17 @@ justify-content: center;
 
 .modal-description {
     display: grid;
-   grid-area: modal-description;
+    grid-area: modal-description;
     text-align: justify;
 }
+
 .modal-budget {
     display: grid;
-   grid-area: modal-budget;
+    grid-area: modal-budget;
     text-align: justify;
 }
 
 .modal-title {
     display: grid;
-   grid-area: modal-title;
+    grid-area: modal-title;
 }
