@@ -115,6 +115,11 @@ h1 {
     #wrapper {
         grid-area: wrapper;
         background-image: url(../imgs/poster_sketches_30.jpg);
+        background-size: 800px 500px;
+        background-position: right;
+
+
+
         /*        background-attachment: fixed;*/
     }
 
