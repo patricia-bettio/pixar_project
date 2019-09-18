@@ -88,6 +88,7 @@ function showModal(e) {
     console.log(AllData[id - 1].gsx$filmname.$t)
     modal.querySelector(".modal-title").textContent = AllData[id - 1].gsx$filmname.$t;
     modal.querySelector(".modal-description").textContent = AllData[id - 1].gsx$longdescription.$t;
+    modal.querySelector(".modal-budget").textContent = AllData[id - 1].gsx$budget.$t;
     modal.querySelector(".modal-image").setAttribute("src", "imgs/" + AllData[id - 1].gsx$image.$t);
     //modal.querySelector(".modal-description").textContent = e.longdescription;
     //modal.classList.remove("hide");*/
