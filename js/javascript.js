@@ -63,7 +63,15 @@ function oneMovie(item) {
     const copy = template.cloneNode(true);
     copy.querySelector(".movie_title").textContent = item.gsx$filmname.$t;
     copy.querySelector(".short_description").textContent = item.gsx$shortsdescription.$t;
+    copy.querySelector('.movies').setAttribute('data-title', item.gsx$filmname.$t)
+
+
+
+
+
+
     copy.querySelector(".movie_img").setAttribute("src", "imgs/" + item.gsx$image.$t);
+
     /* copy.querySelector(".modal-description").textContent = item.gsx$longdescription.$t;
      copy.querySelector(".modal-bg").classList.add("desc-id-" + item.gsx$b.$t);
      copy.querySelector(".modalbutton").setAttribute("data-id", item.gsx$b.$t);*/
@@ -112,6 +120,55 @@ modal.addEventListener("click", () => {
 
 
 
+//search bar luci style
+document.getElementById('myinput').addEventListener('input', function () {
+    let searchValue = this.value.toLowerCase();
+    if (searchValue.length < 2) {
+        displayAllMoviesAgain()
+        return;
+    }
+    let movies = document.querySelectorAll('.movies')
+    let moviesArr = Array.from(movies);
+    moviesArr.forEach(e => {
+        e.classList.add('hide')
+        let movieTitle = e.getAttribute('data-title').toLowerCase()
+        let firstSpace = movieTitle.indexOf(' ')
+        let subStringTest = movieTitle.substring(0, firstSpace)
+        if (searchValue == subStringTest) {
+            displaySearchedMovies(moviesArr, e)
+            e.classList.remove('hide')
+        }
+    })
+})
+
+function displayAllMoviesAgain() {
+    let movies = document.querySelectorAll('.movies')
+    let moviesArr = Array.from(movies);
+    moviesArr.forEach(e => {
+        e.classList.remove('hide')
+    })
+}
+
+function displaySearchedMovies(array, item) {
+    item.classList.remove('hide')
+
+}
+//function searchFunction() {
+//    var input, filter, movielist, a, i;
+//    input = document.getElementById('myinput');
+//    filter = input.value.toUpperCase();
+//    ul = document.getElementsByClassName('movielist');
+//    li = ul.getElementsByClassName('movies');
+//
+//    for (i = 0; i < li.length; i++) {
+//        a = li[i].getElementsByTagName('a')[0];
+//        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+//            li[i].style.display = "";
+//        } else {
+//            li[i].style.display = 'none';
+//        }
+//    }
+//}
 
 
 
