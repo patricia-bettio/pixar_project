@@ -218,8 +218,21 @@ li a {
 
 }
 
-.active {
-	background-color: #E2684B;
+li a:active {
+	display: flex;
+	color: white;
+	border-style: solid;
+	background-color: black;
+	position: relative;
+	top: 200px;
+	left: -20px;
+	padding: 1rem;
+	margin: 1rem;
+	text-align: center;
+	text-decoration: none;
+
+
+
 }
 
 
