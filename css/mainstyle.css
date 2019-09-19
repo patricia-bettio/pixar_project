@@ -2,39 +2,35 @@
 
 
 /*fonts*/
-
-p {
+* {
 	font-family: 'Manjari', sans-serif;
 }
+
+html {
+	background: url(imgs/res/poster_sketches_30.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
 
 
 h1 {
-	font-family: 'Manjari', sans-serif;
 	font-weight: 100;
 }
 
-h2 {
-	font-family: 'Manjari', sans-serif;
-}
-
-h3 {
-	font-family: 'Manjari', sans-serif;
-}
-
 h4 {
-	font-family: 'Manjari', sans-serif;
 	font-weight: 100;
 	height: 110px;
 }
 
 h5 {
-	font-family: 'Manjari', sans-serif;
 	font-size: 15px;
-
 }
 
 h6 {
-	font-family: 'Manjari', sans-serif;
 	font-size: 18px;
 	color: white;
 	font-weight: 100;
@@ -42,12 +38,10 @@ h6 {
 	position: relative;
 	top: 70px;
 	left: 50%;
-
 }
 
 
 li a {
-	font-family: 'Manjari', sans-serif;
 	font-weight: 400;
 	font-size: 20px;
 	justify-content: center;
@@ -462,17 +456,9 @@ a:hover {
 }
 
 /*About us page*/
-/*html {
-	background: url(imgs/res/poster_sketches_30.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}*/
 
-* {
-	font-family: 'Manjari', sans-serif;
-}
+
+
 
 /*@media only screen and (min-width: 800px) {
 	body {
@@ -508,9 +494,10 @@ a:hover {
 	grid-column: 2/2;
 	grid-row: 1/-1;
 	margin-top: 150px;
+	color: black;
 }
 
-h2 {
+.who_are_we {
 	color: #3350A3;
 	display: grid;
 	grid-column: 2/2;
