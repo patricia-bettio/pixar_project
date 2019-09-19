@@ -2,66 +2,60 @@
 
 
 /*fonts*/
-
-p {
-    font-family: 'Manjari', sans-serif;
+* {
+	font-family: 'Manjari', sans-serif;
 }
+
+html {
+	background: url(imgs/res/poster_sketches_30.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
 
 
 h1 {
-    font-family: 'Manjari', sans-serif;
-    font-weight: 100;
-}
-
-h2 {
-    font-family: 'Manjari', sans-serif;
-}
-
-h3 {
-    font-family: 'Manjari', sans-serif;
+	font-weight: 100;
 }
 
 h4 {
-    font-family: 'Manjari', sans-serif;
-    font-weight: 100;
-    height: 110px;
+	font-weight: 100;
+	height: 110px;
 }
 
 h5 {
-    font-family: 'Manjari', sans-serif;
-    font-size: 15px;
-
+	font-size: 15px;
 }
 
 h6 {
-    font-family: 'Manjari', sans-serif;
-    font-size: 18px;
-    color: white;
-    font-weight: 100;
-    display: inline-flex;
-    position: relative;
-    top: 70px;
-    left: 50%;
-
+	font-size: 18px;
+	color: white;
+	font-weight: 100;
+	display: inline-flex;
+	position: relative;
+	top: 70px;
+	left: 50%;
 }
 
 
 li a {
-    font-family: 'Manjari', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    justify-content: center;
+	font-weight: 400;
+	font-size: 20px;
+	justify-content: center;
 }
 
 
 /*main*/
 main {
-    max-width: 500px;
-    margin: 0 auto;
+	max-width: 500px;
+	margin: 0 auto;
 }
 
 body {
-    margin: 0;
+	margin: 0;
 }
 
 h1,
@@ -72,32 +66,32 @@ h5,
 h6,
 button,
 h1 {
-    display: block;
+	display: block;
 }
 
 .hide {
-    display: none;
+	display: none;
 }
 
 .modalbutton {
-    /*    float: right;*/
-    bottom: 0px;
-    ;
-    background-color: #3350A3;
-    color: white;
-    border: none;
-    padding: 10px;
-    width: 90px;
-    font-family: 'Manjari', sans-serif;
-    justify-content: center;
-    display: flex;
+	/*    float: right;*/
+	bottom: 0px;
+	;
+	background-color: #3350A3;
+	color: white;
+	border: none;
+	padding: 10px;
+	width: 90px;
+	font-family: 'Manjari', sans-serif;
+	justify-content: center;
+	display: flex;
 
 
 }
 
 .button-wrapper {
-    display: flex;
-    justify-content: flex-end;
+	display: flex;
+	justify-content: flex-end;
 
 }
 
@@ -105,101 +99,101 @@ h1 {
 /* for browsers that support GRID, apply the below*/
 @supports (display:grid) {
 
-    body {
-        display: grid;
-        grid-template-areas: "wrapper topbar""wrapper maincontainer";
-        grid-template-columns: 400px 2fr;
+	body {
+		display: grid;
+		grid-template-areas: "wrapper topbar""wrapper maincontainer";
+		grid-template-columns: 400px 2fr;
 
-    }
+	}
 
-    #wrapper {
-        grid-area: wrapper;
-        background-image: url(../imgs/poster_sketches_30.jpg);
-        background-size: 800px 500px;
-        background-position: right;
-
-
-
-        /*        background-attachment: fixed;*/
-    }
-
-    #topbar {
-        grid-area: topbar;
-    }
+	#wrapper {
+		grid-area: wrapper;
+		background-image: url(../imgs/poster_sketches_30.jpg);
+		background-size: 800px 500px;
+		background-position: right;
 
 
 
-    main {
-        background-color: #E2684B;
-        max-width: none;
-        margin: 0;
-        grid-area: maincontainer;
-    }
+		/*        background-attachment: fixed;*/
+	}
+
+	#topbar {
+		grid-area: topbar;
+	}
 
 
-    article {
-        margin: 0px;
-        background-color: white;
-        padding: 1rem;
-    }
 
-    .movieslist > section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 50px;
-        grid-row-gap: 40px;
-        margin: 0 50px;
-    }
+	main {
+		background-color: #E2684B;
+		max-width: none;
+		margin: 0;
+		grid-area: maincontainer;
+	}
 
-    .movieslist > section > h1 {
-        grid-column: 1/-1;
-        grid-gap: auto;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        padding-left: 0.5rem;
-        background-color: #3350A3;
-        color: white;
-        text-align: center;
-        margin: 80px 0 40px 0;
 
-    }
+	article {
+		margin: 0px;
+		background-color: white;
+		padding: 1rem;
+	}
+
+	.movieslist > section {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 50px;
+		grid-row-gap: 40px;
+		margin: 0 50px;
+	}
+
+	.movieslist > section > h1 {
+		grid-column: 1/-1;
+		grid-gap: auto;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		padding-left: 0.5rem;
+		background-color: #3350A3;
+		color: white;
+		text-align: center;
+		margin: 80px 0 40px 0;
+
+	}
 
 }
 
 /*POSTER movies*/
 
 .movie_img {
-    display: block;
-    width: 180px;
-    height: auto;
-    margin: auto;
+	display: block;
+	width: 180px;
+	height: auto;
+	margin: auto;
 }
 
 .img-wrapper {
-    height: 280px;
-    display: flex;
+	height: 280px;
+	display: flex;
 }
 
 .moviesbody {
-    display: block;
-    /*    width: 250px;*/
-    height: 100%;
-    /*    padding: 1rem;*/
-    margin: auto;
-    /*    background-color: white;*/
+	display: block;
+	/*    width: 250px;*/
+	height: 100%;
+	/*    padding: 1rem;*/
+	margin: auto;
+	/*    background-color: white;*/
 }
 
 /* Menu style */
 
 ul {
-    list-style-type: none;
-    background-position: bottom;
-    background-size: cover;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-    width: 350px;
-    margin: 0;
+	list-style-type: none;
+	background-position: bottom;
+	background-size: cover;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+	width: 350px;
+	margin: 0;
 
 
 
@@ -208,40 +202,40 @@ ul {
 
 
 li a {
-    display: flex;
-    color: white;
-    border-style: solid;
-    background-color: #3350A3;
-    position: relative;
-    top: 200px;
-    left: -20px;
-    padding: 1rem;
-    margin: 1rem;
-    text-align: center;
-    text-decoration: none;
+	display: flex;
+	color: white;
+	border-style: solid;
+	background-color: #3350A3;
+	position: relative;
+	top: 200px;
+	left: -20px;
+	padding: 1rem;
+	margin: 1rem;
+	text-align: center;
+	text-decoration: none;
 
 
 
 }
 
 .active {
-    background-color: #E2684B;
+	background-color: #E2684B;
 }
 
 
 a:hover {
-    background-color: #E2684B;
+	background-color: #E2684B;
 }
 
 /*Pixar logo*/
 
 #pixarlogo {
-    position: absolute;
-    height: auto;
-    width: 300px;
+	position: absolute;
+	height: auto;
+	width: 300px;
 
 
-    margin: 10px;
+	margin: 10px;
 
 
 
@@ -250,213 +244,264 @@ a:hover {
 
 /*topbar*/
 #topbar {
-    background-color: #3350A3;
-    position: relative;
-    height: 200px;
+	background-color: #3350A3;
+	position: relative;
+	height: 200px;
 
 }
 
 /*topbar boxes*/
 /* Customize the label (the container) */
 .container {
-    display: inline-flex;
-    position: relative;
-    padding-left: 40px;
-    margin: 0 30px 0 30px;
-    top: 50px;
-    left: 50%;
-    cursor: pointer;
-    font-size: 22px;
-    font-family: 'Manjari', sans-serif;
-    color: white;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+	display: inline-flex;
+	position: relative;
+	padding-left: 40px;
+	margin: 0 30px 0 30px;
+	top: 50px;
+	left: 50%;
+	cursor: pointer;
+	font-size: 22px;
+	font-family: 'Manjari', sans-serif;
+	color: white;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 /* Hide the browser's default checkbox */
 .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
 }
 
 /* Create a custom checkbox */
 .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
 }
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-    background-color: whitesmoke;
+	background-color: whitesmoke;
 }
 
 /* When the checkbox is checked, add a red background */
 .container input:checked ~ .checkmark {
-    background-color: #E2684B;
+	background-color: #E2684B;
 }
 
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+	content: "";
+	position: absolute;
+	display: none;
 }
 
 /* Show the checkmark when checked */
 .container input:checked ~ .checkmark:after {
-    display: block;
+	display: block;
 }
 
 /* Style the checkmark/indicator */
 .container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 
 /*history*/
 
 .historycontent {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 5%;
-    width: 90%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 5%;
+	width: 90%;
 }
 
 .historytext {
-    padding: 2.5%;
-    width: 95%;
-    padding-top: 0;
+	padding: 2.5%;
+	width: 95%;
+	padding-top: 0;
 }
 
 .historytext h1 {
-    margin-block-start: 0.3em;
-    font-size: 25px;
+	margin-block-start: 0.3em;
+	font-size: 25px;
 }
 
 .historytext h2 {
-    margin-top: 3em;
-    font-size: 25px;
+	margin-top: 3em;
+	font-size: 25px;
 }
 
 .historytext p {
-    line-height: 1.5em;
+	line-height: 1.5em;
 }
 
 .historymovies {
-    width: 100%;
+	width: 100%;
 }
 
 .historyimages {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
 }
 
 .historymovies img {
-    padding: 1.5%;
-    width: 97%;
+	padding: 1.5%;
+	width: 97%;
 }
 
 .historyimages img {
-    padding: 2.5%;
-    width: 95%;
+	padding: 2.5%;
+	width: 95%;
 }
 
 @media only screen and (max-width: 900px) {
-    .historycontent {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 1.5%;
-        width: 97%;
-    }
+	.historycontent {
+		display: grid;
+		grid-template-columns: 1fr;
+		margin: 1.5%;
+		width: 97%;
+	}
 
-    .historytext h1 {
-        margin-block-start: 1em;
-        font-size: 20px;
-    }
+	.historytext h1 {
+		margin-block-start: 1em;
+		font-size: 20px;
+	}
 
-    .historytext h2 {
-        margin-top: 1em;
-        font-size: 20px;
-    }
+	.historytext h2 {
+		margin-top: 1em;
+		font-size: 20px;
+	}
 
-    .historytext p {
-        font-size: 12px;
-    }
+	.historytext p {
+		font-size: 12px;
+	}
 }
 
 
 /*modal style*/
 .hide {
-    display: none;
+	display: none;
 }
 
 .modal-background {
-    position: fixed;
-    z-index: 10;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	justify-content: center;
 }
 
 .modal-content {
-    display: grid;
-    grid-template-columns: 1fr 1.75fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "modal-image modal-title"
-        "modal-image modal-description"
-        "modal-image modal-budget";
-    background-color: #fefefe;
-    border: 1px solid #7c1f17;
-    margin: 60px 250px;
-    padding: 1em 3em 1em 0;
+	display: grid;
+	grid-template-columns: 1fr 1.75fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"modal-image modal-title"
+		"modal-image modal-description"
+		"modal-image modal-budget";
+	background-color: #fefefe;
+	border: 1px solid #7c1f17;
+	margin: 60px 250px;
+	padding: 1em 3em 1em 0;
 
 }
 
 .modal-image {
-    display: grid;
-    grid-area: modal-image;
-    width: 300px;
-    height: auto;
-    margin: auto;
+	display: grid;
+	grid-area: modal-image;
+	width: 300px;
+	height: auto;
+	margin: auto;
 
 }
 
 .modal-description {
-    display: grid;
-    grid-area: modal-description;
-    text-align: justify;
+	display: grid;
+	grid-area: modal-description;
+	text-align: justify;
 }
 
 .modal-budget {
-    display: grid;
-    grid-area: modal-budget;
-    text-align: justify;
+	display: grid;
+	grid-area: modal-budget;
+	text-align: justify;
 }
 
 .modal-title {
-    display: grid;
-    grid-area: modal-title;
+	display: grid;
+	grid-area: modal-title;
+}
+
+/*About us page*/
+
+
+
+
+/*@media only screen and (min-width: 800px) {
+	body {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+	}*/
+
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: minmax400px, auto);
+}
+
+.all_pics {
+	width: 25rem;
+	height: auto;
+	display: grid;
+	grid-column: 1/2;
+	grid-row: auto;
+	margin-top: 50px;
+}
+
+.about_us_txt {
+	width: 70%;
+	height: auto;
+	background-color: white;
+	padding: 40px;
+	border-radius: 50px 0px 50px 0px;
+	border: 2px solid #a7a9ac;
+	display: grid;
+	grid-column: 2/2;
+	grid-row: 1/-1;
+	margin-top: 150px;
+	color: black;
+}
+
+.who_are_we {
+	color: #3350A3;
+	display: grid;
+	grid-column: 2/2;
+	grid-row: 1/-1;
+	margin-top: 80px;
+	margin-left: 240px;
 }
