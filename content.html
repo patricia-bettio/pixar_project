@@ -2,106 +2,109 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title></title>
-	<link rel="stylesheet" href="css/mainstyle.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/mainstyle.css">
 
 </head>
 
 <body>
-	<!-- menu settings -->
-	<div id="wrapper">
-		<ul>
-			<div><a href="index.html"><img id="pixarlogo" src="imgs/res/pixar-logo.png"></a>
+    <!-- menu settings -->
+    <div id="wrapper">
+        <ul>
+            <div><a href="index.html"><img id="pixarlogo" src="imgs/res/pixar-logo.png"></a>
 
 
-				<li><a href="content.html">HOME</a></li>
-				<li><a href="about_us.html">ABOUT US</a></li>
-				<li><a href="aboutPixar.html">ABOUT PIXAR</a></li>
-			</div>
+                <li><a href="content.html">HOME</a></li>
+                <li><a href="about_us.html">ABOUT US</a></li>
+                <li><a href="aboutPixar.html">ABOUT PIXAR</a></li>
+            </div>
 
-		</ul>
+        </ul>
 
-	</div>
-	<!-- TOP BAR menu options-->
-
-
-	<div id="topbar">
-		<!-- TOP BAR YEAR-->
-
-		<h6>Sort by</h6>
-
-		<label class="container">Year
-			<input type="checkbox">
-			<span class="checkmark"></span>
-		</label>
-
-		<!-- TOP BAR BUDGET-->
+    </div>
+    <!-- TOP BAR menu options-->
 
 
-		<label class="container">Budget
-			<input type="checkbox">
-			<span class="checkmark"></span>
-		</label>
+    <div id="topbar">
+        <!-- TOP BAR YEAR-->
+        <div class="search-bar">
+            <input type="text" name="search" value="" autocomplete="off" id="myinput" placeholder="Search">
+        </div>
 
-		<!-- TOP BAR menu options-->
+        <h6>Sort by</h6>
 
-		<label class="container">Box Office
-			<input type="checkbox">
-			<span class="checkmark"></span>
-		</label>
-	</div>
+        <label class="container">Year
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
 
-
-
-	<div id="maincontainer">
+        <!-- TOP BAR BUDGET-->
 
 
+        <label class="container">Budget
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
 
-		<!--header: Decades -->
+        <!-- TOP BAR menu options-->
 
-		<header id="header">
-
-		</header>
-
-
-		<main class="movieslist">
-			<template>
-				<article class="movies">
-
-					<section class="moviesbody">
-						<div class="img-wrapper">
-							<img class="movie_img" src="imgs/storm.jpeg" alt="">
-						</div>
-						<h3 class="movie_title"></h3>
-						<h4 class="short_description"></h4>
-						<div class="button-wrapper">
-							<button class="modalbutton">More</button>
-						</div>
-					</section>
-				</article>
-			</template>
-		</main>
-	</div>
+        <label class="container">Box Office
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+    </div>
 
 
-	<footer class="footer"></footer>
 
-	<!-- Modal-->
-	<div class="modal-background hide">
-		<div class="modal-content">
-			<h3 class="modal-title"></h3>
-			<img src="" alt="" class="modal-image" />
-			<!-- <h4 class="modal-subtitle"></h4>-->
-			<h5 class="modal-budget"></h5>
-			<p class="modal-description"></p>
+    <div id="maincontainer">
 
 
-		</div>
-	</div>
 
-	<script src="js/javascript.js"></script>
+        <!--header: Decades -->
+
+        <header id="header">
+
+        </header>
+
+
+        <main class="movieslist">
+            <template>
+                <article class="movies">
+                    <section class="moviesbody">
+                        <div class="img-wrapper">
+                            <img class="movie_img" src="imgs/storm.jpeg" alt="">
+                        </div>
+                        <h3 class="movie_title"></h3>
+                        <h4 class="short_description"></h4>
+                        <div class="button-wrapper">
+                            <button class="modalbutton">More</button>
+                        </div>
+                    </section>
+                </article>
+            </template>
+        </main>
+
+    </div>
+
+
+    <footer class="footer"></footer>
+
+    <!-- Modal-->
+    <div class="modal-background hide">
+        <div class="modal-content">
+            <h3 class="modal-title"></h3>
+            <img src="" alt="" class="modal-image" />
+            <!-- <h4 class="modal-subtitle"></h4>-->
+            <h5 class="modal-budget"></h5>
+            <p class="modal-description"></p>
+
+
+        </div>
+    </div>
+
+    <script src="js/javascript.js"></script>
 </body>
 
 </html>
